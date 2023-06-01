@@ -43,15 +43,15 @@ dependencies {
     implementation 'androidx.compose.material3:material3'
 }
 
-afterEvaluate {
-    publishing {
-        publications {
-            release(MavenPublication) {
-                group = 'com.github.MelihcanSrky'
-                artifactId = 'mcs-custom-components'
-                version = '0.1.10'
+publishing {
+    publications {
+        release(MavenPublication) {
+            groupId = 'com.github.MelihcanSrky'
+            artifactId = 'KotlinCustomComponents'
+            version = '0.1.12'
 
-                from components.release
+            afterEvaluate {
+                from(components["release"])
             }
         }
     }
