@@ -47,11 +47,11 @@ afterEvaluate {
     publishing {
         publications {
             release(MavenPublication) {
-                from components.release
-
-                groupId = 'com.github.MelihcanSrky'
+                group = 'com.github.MelihcanSrky'
                 artifactId = 'mcs-custom-components'
                 version = '0.1.10'
+
+                from components.release
             }
         }
     }
