@@ -18,17 +18,13 @@ import androidx.compose.material3.Divider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.melihcan.androidpackage.ui.theme.AndroidPackageTheme
 import com.melihcan.androidpackage.ui.theme.BackgroundSecondaryLight
-import com.melihcan.androidpackage.ui.theme.Purple40
-import com.melihcan.androidpackage.ui.theme.Purple80
 import com.melihcan.mcscomponentspack.MCSButton
 import com.melihcan.mcscomponentspack.MCSRadioButton
 

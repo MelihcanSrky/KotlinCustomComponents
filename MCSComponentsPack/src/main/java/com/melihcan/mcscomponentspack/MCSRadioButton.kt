@@ -1,20 +1,13 @@
 package com.melihcan.mcscomponentspack
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.shape.CornerBasedShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonColors
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.ButtonElevation
-import androidx.compose.material3.ElevatedButton
 import androidx.compose.material3.Icon
-import androidx.compose.material3.Shapes
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -22,13 +15,15 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 
+/**
+ * MCS Custom Components Library
+ *
+ * Default Custom Button
+ */
 @Composable
 fun MCSButton(
     label: String,
@@ -48,6 +43,14 @@ fun MCSButton(
     iconPrimaryColor = iconPrimaryColor,
 )
 
+/**
+ * MCS Custom Components Library
+ *
+ * Radio Custom Button
+ *
+ * @param value is the index of the radio button
+ * @param groupValue is the selected index of the group
+ */
 @Composable
 fun MCSRadioButton(
     value: Int = -1,
