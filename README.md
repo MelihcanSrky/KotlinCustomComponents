@@ -20,6 +20,6 @@ allprojects {
 2. Add the dependency
 ```kotlin
 dependencies {
-	implementation 'com.github.MelihcanSrky:KotlinCustomComponents:Tag'
+	implementation 'com.github.MelihcanSrky:KotlinCustomComponents:0.1.12'
 }
 ```
