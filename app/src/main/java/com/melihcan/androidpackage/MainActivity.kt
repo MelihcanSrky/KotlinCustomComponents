@@ -26,6 +26,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.melihcan.androidpackage.ui.theme.AndroidPackageTheme
+import com.melihcan.androidpackage.ui.theme.BackgroundSecondaryLight
 import com.melihcan.androidpackage.ui.theme.Purple40
 import com.melihcan.androidpackage.ui.theme.Purple80
 import com.melihcan.mcscomponentspack.MCSButton
@@ -50,9 +51,9 @@ class MainActivity : ComponentActivity() {
                             MCSButton(
                                 label = "Button #2",
                                 icon = Icons.Default.Create,
-                                backgroundPrimaryColor = Purple80,
+                                backgroundPrimaryColor = BackgroundSecondaryLight,
                                 textPrimaryColor = Color.White,
-                                iconPrimaryColor = Purple40
+                                iconPrimaryColor = Color.White
                             )
                         }
                         Divider()
