@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CornerBasedShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonColors
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ButtonElevation
@@ -33,6 +34,7 @@ fun MCSButton(
     label: String,
     icon: ImageVector?,
     onClick: () -> Unit = {},
+    shape: RoundedCornerShape = MCSRadiusSmall(),
     backgroundPrimaryColor: Color = BackgroundPrimaryLight,
     textPrimaryColor: Color = Color.Black,
     iconPrimaryColor: Color = BackgroundSecondaryLight,
@@ -40,6 +42,7 @@ fun MCSButton(
     label = label,
     icon = icon,
     onClick = onClick,
+    shape = shape,
     backgroundPrimaryColor = backgroundPrimaryColor,
     textPrimaryColor = textPrimaryColor,
     iconPrimaryColor = iconPrimaryColor,
@@ -52,6 +55,7 @@ fun MCSRadioButton(
     label: String,
     icon: ImageVector?,
     onClick: () -> Unit = {},
+    shape: RoundedCornerShape = MCSRadiusAll(),
     backgroundPrimaryColor: Color = BackgroundPrimaryLight,
     backgroundSecondaryColor: Color = BackgroundSecondaryLight,
     textPrimaryColor: Color = Color.Black,
@@ -64,6 +68,7 @@ fun MCSRadioButton(
     label = label,
     icon = icon,
     onClick = onClick,
+    shape = shape,
     backgroundPrimaryColor = backgroundPrimaryColor,
     backgroundSecondaryColor = backgroundSecondaryColor,
     textPrimaryColor = textPrimaryColor,
@@ -80,6 +85,7 @@ private fun MCSButtonBase(
     label: String,
     icon: ImageVector?,
     onClick: () -> Unit = {},
+    shape: RoundedCornerShape = MCSFlat(),
     backgroundPrimaryColor: Color = BackgroundPrimaryLight,
     backgroundSecondaryColor: Color = BackgroundSecondaryLight,
     textPrimaryColor: Color = Color.Black,
@@ -118,7 +124,7 @@ private fun MCSButtonBase(
         return iconColor
     }
 
-    ElevatedButton(
+    Button(
         onClick = onClick,
         colors = ButtonDefaults.buttonColors(
             containerColor = if (value == -1) backgroundColor else setBackgroundColor()
@@ -127,6 +133,7 @@ private fun MCSButtonBase(
         elevation = ButtonDefaults.buttonElevation(
             defaultElevation = 2.dp
         ),
+        shape = shape
     ) {
         if (icon != null)
             Icon(
